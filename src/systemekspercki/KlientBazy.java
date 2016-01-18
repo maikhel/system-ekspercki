@@ -36,12 +36,12 @@ public class KlientBazy {
     public void printTest(){
         try{
             Statement stm = con.createStatement();
-            String SQL = "SELECT * FROM producent_aparatu";
+            String SQL = "SELECT * FROM producent_obiektywu";
             ResultSet rs = stm.executeQuery(SQL);
             
             while(rs.next()){
                 int id_col = rs.getInt("ID");
-                String nazwa = rs.getString("NAME");
+                String nazwa = rs.getString("NAZWA");
                 System.out.println(id_col + " " + nazwa);
             }
             

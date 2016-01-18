@@ -12,6 +12,14 @@ package systemekspercki;
  */
 public class Obiektyw {
     private String producent;
-    private double cena;
+    private TypOgniskowej ogniskowa;
+    private int dolnaGranicaOgniskowej;
+    private int gornaGranicaOgniskowej;
+    private boolean czyFisheye;
+    private TypFotografii fotografie[];
+    private boolean czyUszczelniony;
+    private double cenaMin;
+    private double cenaMax;
+    private boolean czySpozaSystemu;
     
 }
