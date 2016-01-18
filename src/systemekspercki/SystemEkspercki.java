@@ -17,7 +17,8 @@ public class SystemEkspercki {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        KlientBazy klient = new KlientBazy();
+        klient.printTest();
     }
     
 }
