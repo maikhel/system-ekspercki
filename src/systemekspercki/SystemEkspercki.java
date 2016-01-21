@@ -6,19 +6,21 @@
 
 package systemekspercki;
 
-/**
- *
- * @author Majk
- */
+
 public class SystemEkspercki {
     public static int postep;
+   
+   
     
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        KlientBazy klient = new KlientBazy();
-        klient.printTest();
+//        KlientBazy klient = new KlientBazy();
+//        klient.printTest();
+    
+       KolekcjaPytan pytania = new KolekcjaPytan();
+       
+       pytania.zadawajPytania();
+       
+    
     }
     
 }

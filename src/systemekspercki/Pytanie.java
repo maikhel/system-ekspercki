@@ -6,7 +6,6 @@
 
 package systemekspercki;
 
-import java.util.ArrayList;
 /**
  *
  * @author Majk
@@ -14,16 +13,21 @@ import java.util.ArrayList;
 public class Pytanie {
     private int ileOdpowiedzi;
     private int numer;
+    private String tresc;
     private Pytanie nastepnePytanie;
-    private ArrayList mozliweOdpowiedzi;
-    private Odpowiedz odpowiedz;
+    private Odpowiedz mozliwaOdpowiedz;
     
-    
-    
-    public void show(){
-        //wyswietla pytanie
+    public Pytanie(String tresc, Odpowiedz odpowiedz){
+        this.tresc = tresc;
+        mozliwaOdpowiedz = odpowiedz;
     }
     
+    public void wyswietlTresc(){
+        System.out.println(tresc);
+    }
+    public void wyswietlOdpwiedzi(){
+         mozliwaOdpowiedz.wyswietl();
+    }
     public void odpowiedz(){
         
     }

@@ -6,10 +6,30 @@
 
 package systemekspercki;
 
-/**
- *
- * @author Majk
- */
+import java.util.ArrayList;
+
 public class Odpowiedz {
+    private int ile;
+    private ArrayList opcje;
+    
+    public Odpowiedz(ArrayList odpowiedzi){
+        opcje = odpowiedzi;
+    }
+    
+    public void wyswietl(){
+         for(int i = 0; i< opcje.size(); i++){
+            try{
+                String odp = (String) opcje.get(i);
+                System.out.println(odp);
+            }catch(ClassCastException e){
+                int odp = (int) opcje.get(i);
+                System.out.println(odp);
+            }           
+         }
+    }
+        
+    public ArrayList getOpcje(){
+        return opcje;
+    }
     
 }
