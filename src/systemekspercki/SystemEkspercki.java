@@ -20,7 +20,16 @@ public class SystemEkspercki {
        
        pytania.zadawajPytania();
        
-    
     }
     
 }
+//TODO
+// dodac pobieranie odpowiedzi z konsoli
+// dodac workflow z wyszukiwaniem odpowiedzi
+// dodac wszystkie opcje odpowiedzi
+// dodac obiektywy PENTAX
+// dodac obiektywy CANON
+// dodac obiektywy NIKON
+// dodac obiektywy SIGMA
+// dodac obiektywy TAMRON
+// dodac obiektywy SAMYANG

@@ -6,10 +6,7 @@
 
 package systemekspercki;
 
-/**
- *
- * @author Majk
- */
+
 public class Pytanie {
     private int ileOdpowiedzi;
     private int numer;

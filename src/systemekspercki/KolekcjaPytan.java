@@ -22,6 +22,7 @@ public class KolekcjaPytan {
             Pytanie p = (Pytanie) pytania.get(i);
             p.wyswietlTresc();
             p.wyswietlOdpwiedzi();
+            
         }
     }
     

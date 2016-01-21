@@ -12,10 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
-/**
- *
- * @author Majk
- */
+
 public class KlientBazy {
     private String host;
     private String userName;

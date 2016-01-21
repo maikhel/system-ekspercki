@@ -6,10 +6,7 @@
 
 package systemekspercki;
 
-/**
- *
- * @author Majk
- */
+
 public class Obiektyw {
     private String producent;
     private TypOgniskowej ogniskowa;
