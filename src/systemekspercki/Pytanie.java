@@ -6,26 +6,42 @@
 
 package systemekspercki;
 
+import java.util.Scanner;
+
 
 public class Pytanie {
-    private int ileOdpowiedzi;
     private int numer;
     private String tresc;
-    private Pytanie nastepnePytanie;
-    private Odpowiedz mozliwaOdpowiedz;
+    private KolekcjaOdpowiedzi mozliweOdpowiedzi;
     
-    public Pytanie(String tresc, Odpowiedz odpowiedz){
+    public Pytanie(String tresc, KolekcjaOdpowiedzi odpowiedzi){
         this.tresc = tresc;
-        mozliwaOdpowiedz = odpowiedz;
+        mozliweOdpowiedzi = odpowiedzi;
     }
     
     public void wyswietlTresc(){
         System.out.println(tresc);
     }
     public void wyswietlOdpwiedzi(){
-         mozliwaOdpowiedz.wyswietl();
+         mozliweOdpowiedzi.wyswietl();
     }
-    public void odpowiedz(){
+
+    public void getOdpowiedz(){
+        System.out.println("-----");
+        Scanner reader = new Scanner(System.in); 
+        String input = reader.nextLine();
+//        mozliweOdpowiedzi.odpowiedz(input);
         
+        while (!mozliweOdpowiedzi.odpowiedz(input)){
+            System.out.println("-----");
+            input = reader.nextLine();
+            System.out.println("INPUT: " + input);
+        }
+    }
+    public String wybranaOdpowiedz(){
+        return mozliweOdpowiedzi.getOdpowiedz();
+    }
+    public void wyswietlWybranaOdpowiedz(){
+        System.out.println("Wybrana odpowiedz: " + wybranaOdpowiedz());
     }
 }

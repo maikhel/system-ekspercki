@@ -6,7 +6,6 @@
 
 package systemekspercki;
 
-
 public class SystemEkspercki {
     public static int postep;
    
@@ -17,8 +16,8 @@ public class SystemEkspercki {
 //        klient.printTest();
     
        KolekcjaPytan pytania = new KolekcjaPytan();
-       
        pytania.zadawajPytania();
+       
        
     }
     

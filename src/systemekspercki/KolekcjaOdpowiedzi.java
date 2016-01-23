@@ -8,11 +8,12 @@ package systemekspercki;
 
 import java.util.ArrayList;
 
-public class Odpowiedz {
+public class KolekcjaOdpowiedzi {
     private int ile;
     private ArrayList opcje;
+    private String wybranaOdpowiedz;
     
-    public Odpowiedz(ArrayList odpowiedzi){
+    public KolekcjaOdpowiedzi(ArrayList odpowiedzi){
         opcje = odpowiedzi;
     }
     
@@ -32,4 +33,26 @@ public class Odpowiedz {
         return opcje;
     }
     
+    public boolean odpowiedz(String odp){
+        for(int i = 0; i< opcje.size(); i++){
+            String opcja = (String) opcje.get(i);
+            if (opcja.equals(odp)){
+                setOdpowiedz(odp);
+                return true;
+            }           
+         }
+        return false;
+    }
+    
+    public void setOdpowiedz(String odp){
+        wybranaOdpowiedz = odp;
+    }
+    
+    public void setOdpowiedz(int index){
+        wybranaOdpowiedz = (String) opcje.get(index);
+    }
+    
+    public String getOdpowiedz(){
+        return wybranaOdpowiedz;
+    }
 }
