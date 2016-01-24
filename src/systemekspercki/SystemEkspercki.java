@@ -10,18 +10,18 @@ public class SystemEkspercki {
     public static int postep;
     
     public static void main(String[] args) {
-        KlientBazy klient = new KlientBazy();
-        klient.printTest();
+//        KlientBazy klient = new KlientBazy();
+//        klient.printTest();
+//        klient.zakoncz();
     
-//       KolekcjaPytan pytania = new KolekcjaPytan();
-//       pytania.zadawajPytania();
+       KolekcjaPytan pytania = new KolekcjaPytan();
+       pytania.zadawajPytania();
        
        
     }
     
 }
 //TODO
-// inicjalizowanie bazy danych na poczatku
 // zadawanie wszystkich pytan i pobieranie odpowiedzi
 // tworzenie sql
 // wyszukiwanie i prezentacja wynikow

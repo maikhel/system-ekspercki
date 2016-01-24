@@ -46,6 +46,13 @@ public class KolekcjaPytan {
         String tresc1 = "Aparat jakiego producenta posiadasz?";
         Pytanie pytanie1 = new Pytanie(tresc1, odpowiedz1);
         pytania.add(pytanie1);
+        
+        ArrayList<String> odpMatryca = new ArrayList<>(
+        Arrays.asList("APS-C", "Pełna klatka"));
+        KolekcjaOdpowiedzi odpowiedz11 = new KolekcjaOdpowiedzi(odpMatryca);
+        String tresc11 = "W jaką matrycę wyposażony jest aparat?";
+        Pytanie pytanie11 = new Pytanie(tresc11, odpowiedz11);
+        pytania.add(pytanie11);
 
          ArrayList<String> odpOgniskowe = new ArrayList<>(
                 Arrays.asList("stalo ogniskowy", "zmienno ogniskowy"));
@@ -73,7 +80,12 @@ public class KolekcjaPytan {
         String tresc5 = "Czy obiektyw ma być uszczelniony?";
         Pytanie pytanie5 = new Pytanie(tresc5, odpowiedz5);
         pytania.add(pytanie5);
-
+        
+        KolekcjaOdpowiedzi odpowiedz55 = new KolekcjaOdpowiedzi(odpTakNie);
+        String tresc55 = "Czy obiektyw musi mieć funkcję redukcji drgań?";
+        Pytanie pytanie55 = new Pytanie(tresc55, odpowiedz55);
+        pytania.add(pytanie55);
+        
         ArrayList<Integer> odpZakresCen = new ArrayList<>(
             Arrays.asList(300,500,1000,1500,3000,100000));
         KolekcjaOdpowiedzi odpowiedz6 = new KolekcjaOdpowiedzi(odpZakresCen);
