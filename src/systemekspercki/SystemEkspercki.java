@@ -8,8 +8,6 @@ package systemekspercki;
 
 public class SystemEkspercki {
     public static int postep;
-   
-   
     
     public static void main(String[] args) {
 //        KlientBazy klient = new KlientBazy();
@@ -23,8 +21,11 @@ public class SystemEkspercki {
     
 }
 //TODO
-// dodac pobieranie odpowiedzi z konsoli
-// dodac workflow z wyszukiwaniem odpowiedzi
+// komunikacja z bazą danych
+// http://www.java2s.com/Tutorial/Java/0340__Database/ConnecttoDerbydatabase.htm
+// wypełnienie bazy danych
+// wyświetlanie pytań i odpowiedzi
+
 // dodac wszystkie opcje odpowiedzi
 // dodac obiektywy PENTAX
 // dodac obiektywy CANON
