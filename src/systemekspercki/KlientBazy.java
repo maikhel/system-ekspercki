@@ -30,20 +30,39 @@ public class KlientBazy {
             System.out.println( err.getMessage( ) );
         }
     }
-    public void printTest(){
+    
+    public void zakoncz(){
         try{
-            Statement stm = con.createStatement();
-            String SQL = "SELECT * FROM producent_obiektywu";
-            ResultSet rs = stm.executeQuery(SQL);
+            if(con != null) con.close();
+        }catch ( SQLException err ){
+             System.out.println( err.getMessage( ) );
+        }
+        
+    }
+    public void printTest(){
+        Statement stm = null;
+        ResultSet rs = null;
+        
+        try{
+            stm = con.createStatement();
+            String SQL = "SELECT * FROM OBIEKTYWY";
+            rs = stm.executeQuery(SQL);
             
             while(rs.next()){
                 int id_col = rs.getInt("ID");
                 String nazwa = rs.getString("NAZWA");
                 System.out.println(id_col + " " + nazwa);
             }
+            rs.close();
             
         } catch ( SQLException err ) {
             System.out.println( err.getMessage( ) );
+        }finally{
+            try{
+               if(stm != null) stm.close();
+            }catch(SQLException err){
+                System.out.println( err.getMessage( ) );
+            }
         }
         
         
