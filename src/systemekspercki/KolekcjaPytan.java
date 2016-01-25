@@ -11,27 +11,26 @@ import java.util.Arrays;
 
 public class KolekcjaPytan {
     ArrayList pytania  = new ArrayList();
-    Obiektyw obiektyw;
     
     public KolekcjaPytan(){
         stworzPytania();
-        obiektyw = new Obiektyw();
     }
     
-    public void zadawajPytania(){
-        obiektyw.wysietl();
+    public void zadawajPytania(Obiektyw obiektyw){
         for(int i = 0; i< pytania.size(); i++){
+            
+            if(i == 1 && obiektyw.producent.equals("Pentax")) i++;
+            if(i == 4 && obiektyw.ogniskowa.equals("do 35mm")) i++;
+            if(i == 5 && obiektyw.czyFishEye.equals("tak")) i= 9;
+            if(i == 7 && obiektyw.producent.equals("Pentax")) i++;
+            
             Pytanie p = (Pytanie) pytania.get(i);
             p.wyswietlTresc();
             p.wyswietlOdpwiedzi();
             p.getOdpowiedz();
             p.wyswietlWybranaOdpowiedz();
-//            System.out.println("Producent przed: " + obiektyw.getProducent());
             obiektyw.set(i, p.wybranaOdpowiedz());
-//            System.out.println("Producent PO: " + obiektyw.getProducent());
-
         }
-        obiektyw.wysietl();
     }
     
     private void stworzPytania(){

@@ -13,9 +13,13 @@ public class SystemEkspercki {
 //        KlientBazy klient = new KlientBazy();
 //        klient.printTest();
 //        klient.zakoncz();
-    
+       Obiektyw obiektyw = new Obiektyw();
+       
        KolekcjaPytan pytania = new KolekcjaPytan();
-       pytania.zadawajPytania();
+       pytania.zadawajPytania(obiektyw);
+       obiektyw.wysietl();
+       String sql = obiektyw.generujSQL();
+       //klient.znajdzObiektyw(sql)
        
        
     }

@@ -9,7 +9,6 @@ package systemekspercki;
 import java.util.ArrayList;
 
 public class KolekcjaOdpowiedzi {
-    private int ile;
     private ArrayList opcje;
     private String wybranaOdpowiedz;
     

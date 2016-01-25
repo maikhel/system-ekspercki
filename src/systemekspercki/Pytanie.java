@@ -28,8 +28,16 @@ public class Pytanie {
 
     public void getOdpowiedz(){
         System.out.println("-----");
-        Scanner reader = new Scanner(System.in); 
-        int input = reader.nextInt();
+        Scanner reader = new Scanner(System.in);
+        int input = 1;
+        try{
+            input = reader.nextInt();
+        }catch(java.util.InputMismatchException e){
+            System.out.println("Podaj cyfrę");
+            reader.next();
+            input = reader.nextInt();
+        }
+               
 //        mozliweOdpowiedzi.odpowiedz(input);
         
         while (!mozliweOdpowiedzi.odpowiedz(input)){
