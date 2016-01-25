@@ -21,7 +21,7 @@ public class KolekcjaPytan {
             
             if(i == 1 && obiektyw.producent.equals("Pentax")) i++;
             if(i == 4 && obiektyw.ogniskowa.equals("do 35mm")) i++;
-            if(i == 5 && obiektyw.czyFishEye.equals("tak")) i= 9;
+            if(i == 5 && obiektyw.czyFishEye.equals("tak")) i= 8;
             if(i == 7 && obiektyw.producent.equals("Pentax")) i++;
             
             Pytanie p = (Pytanie) pytania.get(i);
@@ -75,18 +75,18 @@ public class KolekcjaPytan {
         Pytanie pytanie33 = new Pytanie(tresc33, odpowiedz33);
         pytania.add(pytanie33);
         
-        //pytanie 4
-        ArrayList<String> odpTypFoto = new ArrayList<>(
-                Arrays.asList("krajobrazy", "portrety", "makro",
-                "sport", "reportaż", "uniwersalny"));
-        KolekcjaOdpowiedzi odpowiedz4 = new KolekcjaOdpowiedzi(odpTypFoto);
-        String tresc4 = "Do jakiego typu fotografii obiektyw bedzie najczęściej używany?";
-        Pytanie pytanie4 = new Pytanie(tresc4, odpowiedz4);
-        pytania.add(pytanie4);
+        //pytanie 4 - USUNIETE
+//        ArrayList<String> odpTypFoto = new ArrayList<>(
+//                Arrays.asList("krajobrazy", "portrety", "makro",
+//                "sport", "reportaż", "uniwersalny"));
+//        KolekcjaOdpowiedzi odpowiedz4 = new KolekcjaOdpowiedzi(odpTypFoto);
+//        String tresc4 = "Do jakiego typu fotografii obiektyw bedzie najczęściej używany?";
+//        Pytanie pytanie4 = new Pytanie(tresc4, odpowiedz4);
+//        pytania.add(pytanie4);
         
         //pytanie 5
         KolekcjaOdpowiedzi odpowiedz5 = new KolekcjaOdpowiedzi(odpTakNie);
-        String tresc5 = "Czy obiektyw ma być uszczelniony?";
+        String tresc5 = "Czy obiektyw musi być uszczelniony?";
         Pytanie pytanie5 = new Pytanie(tresc5, odpowiedz5);
         pytania.add(pytanie5);
         

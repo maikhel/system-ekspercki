@@ -29,7 +29,7 @@ public class KolekcjaOdpowiedzi {
     
     public boolean odpowiedz(int ktora){
         ktora--;
-        if (ktora <= opcje.size()){
+        if (ktora < opcje.size()){
             String opcja = (String) opcje.get(ktora);
             setOdpowiedz(opcja);
             return true;

@@ -37,9 +37,7 @@ public class Pytanie {
             reader.next();
             input = reader.nextInt();
         }
-               
-//        mozliweOdpowiedzi.odpowiedz(input);
-        
+                       
         while (!mozliweOdpowiedzi.odpowiedz(input)){
             System.out.println("Podaj poprawną cyfrę:");
             input = reader.nextInt();
