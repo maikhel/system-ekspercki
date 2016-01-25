@@ -7,7 +7,6 @@
 package systemekspercki;
 
 public class SystemEkspercki {
-    public static int postep;
     
     public static void main(String[] args) {
         KlientBazy klient = new KlientBazy();
@@ -19,21 +18,9 @@ public class SystemEkspercki {
        pytania.zadawajPytania(obiektyw);
        obiektyw.wysietl();
        String sql = obiektyw.generujSQL();
-       System.out.println("SQL:::");
+       System.out.println("SQL::");
        System.out.println(sql);
-//       String inni = "OR PRODUCENT = 'Tamron' OR PRODUCENT = 'Sigma' OR PRODUCENT = 'Samyang'";
-//            String producent ="(" + "PRODUCENT = " + "'Pentax'" + inni + ")";
-//            String ogniskowaString = " AND DOLNA_OGNISKOWA != GORNA_OGNISKOWA ";
-//                String zakresOgniskowejString = "AND (DOLNA_OGNISKOWA > 200 OR GORNA_OGNISKOWA > 200)";
-//            String czyFishEyeString = " AND FISHEYE = 0";
-//            
-//            	String zakresCenyString = " AND (CENA >= 500 AND CENA < 1000)";
-//            
-//            String SQL = "SELECT * FROM OBIEKTYWY WHERE " + 
-//                    producent + ogniskowaString +
-//                    zakresOgniskowejString
-//                    + czyFishEyeString
-//                    + zakresCenyString;
+
        klient.znajdzObiektyw(sql);
        
        klient.zakoncz();

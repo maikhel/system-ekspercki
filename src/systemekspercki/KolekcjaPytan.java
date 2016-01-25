@@ -18,11 +18,11 @@ public class KolekcjaPytan {
     
     public void zadawajPytania(Obiektyw obiektyw){
         for(int i = 0; i< pytania.size(); i++){
-            
-            if(i == 1 && obiektyw.producent.equals("Pentax")) i++;
-            if(i == 4 && obiektyw.ogniskowa.equals("do 35mm")) i++;
-            if(i == 5 && obiektyw.czyFishEye.equals("tak")) i= 8;
-            if(i == 7 && obiektyw.producent.equals("Pentax")) i++;
+            System.out.println("I: >>>" + i);
+            if(i == 1 && obiektyw.producent.equals("Pentax")) i=2;
+            if(i == 4 && !obiektyw.zakresOgniskowej.equals("do 35mm")) i=5;
+            if(i == 5 && obiektyw.czyFishEye != null && obiektyw.czyFishEye.equals("tak")) i = 8;
+            if(i == 6 && obiektyw.producent.equals("Pentax")) i++;
             
             Pytanie p = (Pytanie) pytania.get(i);
             p.wyswietlTresc();
@@ -37,7 +37,7 @@ public class KolekcjaPytan {
         ArrayList<String> odpTakNie = new ArrayList<>(
         Arrays.asList("tak", "nie"));
         
-        //pytanie 1
+        //pytanie 1, i = 0
         ArrayList<String> odpProducent = new ArrayList<>(
         Arrays.asList("Canon", "Nikon", "Pentax"));
         KolekcjaOdpowiedzi odpowiedz1 = new KolekcjaOdpowiedzi(odpProducent);
@@ -45,7 +45,7 @@ public class KolekcjaPytan {
         Pytanie pytanie1 = new Pytanie(tresc1, odpowiedz1);
         pytania.add(pytanie1);
         
-        //pytanie 1.5
+        //pytanie 1.5, i = 1
         ArrayList<String> odpMatryca = new ArrayList<>(
         Arrays.asList("APS-C", "Pelna klatka"));
         KolekcjaOdpowiedzi odpowiedz11 = new KolekcjaOdpowiedzi(odpMatryca);
@@ -53,7 +53,7 @@ public class KolekcjaPytan {
         Pytanie pytanie11 = new Pytanie(tresc11, odpowiedz11);
         pytania.add(pytanie11);
 
-        //pytanie 2
+        //pytanie 2, i = 2
         ArrayList<String> odpOgniskowe = new ArrayList<>(
                 Arrays.asList("stalo ogniskowy", "zmienno ogniskowy"));
         KolekcjaOdpowiedzi odpowiedz2 = new KolekcjaOdpowiedzi(odpOgniskowe);
@@ -61,7 +61,7 @@ public class KolekcjaPytan {
         Pytanie pytanie2 = new Pytanie(tresc2, odpowiedz2);
         pytania.add(pytanie2);
         
-        //pytanie 3
+        //pytanie 3, i = 3
         ArrayList<String> odpZakresOgniskowych = new ArrayList<>(
                 Arrays.asList("do 35mm", "36-70mm", "71-200mm", "ponad 200mm"));
         KolekcjaOdpowiedzi odpowiedz3 = new KolekcjaOdpowiedzi(odpZakresOgniskowych);
@@ -69,7 +69,7 @@ public class KolekcjaPytan {
         Pytanie pytanie3 = new Pytanie(tresc3, odpowiedz3);
         pytania.add(pytanie3);
         
-        //pytanie 3.5
+        //pytanie 3.5, i = 4
         KolekcjaOdpowiedzi odpowiedz33 = new KolekcjaOdpowiedzi(odpTakNie);
         String tresc33 = "Czy obiektyw typu Fish-Eye?";
         Pytanie pytanie33 = new Pytanie(tresc33, odpowiedz33);
@@ -84,19 +84,19 @@ public class KolekcjaPytan {
 //        Pytanie pytanie4 = new Pytanie(tresc4, odpowiedz4);
 //        pytania.add(pytanie4);
         
-        //pytanie 5
+        //pytanie 5, i = 5
         KolekcjaOdpowiedzi odpowiedz5 = new KolekcjaOdpowiedzi(odpTakNie);
         String tresc5 = "Czy obiektyw musi być uszczelniony?";
         Pytanie pytanie5 = new Pytanie(tresc5, odpowiedz5);
         pytania.add(pytanie5);
         
-        //pytanie 5.5
+        //pytanie 5.5, i = 6
         KolekcjaOdpowiedzi odpowiedz55 = new KolekcjaOdpowiedzi(odpTakNie);
         String tresc55 = "Czy obiektyw musi mieć funkcję redukcji drgań?";
         Pytanie pytanie55 = new Pytanie(tresc55, odpowiedz55);
         pytania.add(pytanie55);
         
-       //pytanie 6
+       //pytanie 6, i = 7
         ArrayList<String> odpZakresCen = new ArrayList<>(
                 Arrays.asList("50-300zl", "300-500zl", "500-1000zl",
                         "1000-1500zl", "1500-3000zl", "ponad 3000zl", "bez znaczenia"));
@@ -106,7 +106,7 @@ public class KolekcjaPytan {
         pytania.add(pytanie6);
         
         
-        //pytanie 7
+        //pytanie 7, i = 8
         KolekcjaOdpowiedzi odpowiedz7 = new KolekcjaOdpowiedzi(odpTakNie);
         String tresc7 = "Czy obiektyw może być spoza systemu (producenta niezależnego)?";
         Pytanie pytanie7 = new Pytanie(tresc7, odpowiedz7);

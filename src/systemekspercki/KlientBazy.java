@@ -54,7 +54,9 @@ public class KlientBazy {
             while(rs.next()){
                 int id_col = rs.getInt("ID");
                 String nazwa = rs.getString("NAZWA");
-                System.out.println(id_col + " " + nazwa);
+                String prod = rs.getString("PRODUCENT");
+                int cena = rs.getInt("CENA");
+                System.out.println(prod + " " + nazwa +", orientacyjna cena: " +cena);
             }
             rs.close();
             

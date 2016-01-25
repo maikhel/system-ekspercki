@@ -8,25 +8,16 @@ package systemekspercki;
 
 
 public class Obiektyw {
-    public String producent;
-    public String matryca;
-    public String ogniskowa;
-    public String zakresOgniskowej;
-    public String czyFishEye;
-    public String czyUszczelniony;
-    public String czyStabilizacja;
-    public String czySpozaSystemu;
-    public String zakresCeny;
-    
-    
-//    private int dolnaGranicaOgniskowej;
-//    private int gornaGranicaOgniskowej;
-//    private boolean czyFisheye;
-//    private TypFotografii fotografie[];
-//    private boolean czyUszczelniony;
-//    private double cenaMin;
-//    private double cenaMax;
-//    private boolean czySpozaSystemu;
+    public String producent = "";
+    public String matryca = "";
+    public String ogniskowa = "";
+    public String zakresOgniskowej = "";
+    public String czyFishEye = "";
+    public String czyUszczelniony = "";
+    public String czyStabilizacja = "";
+    public String czySpozaSystemu = "";
+    public String zakresCeny = "";
+
     
     interface SetAttribute {
         void set(String arg);
@@ -82,7 +73,7 @@ public class Obiektyw {
     public void wysietl(){
         System.out.println("OBIEKTYW:");
         System.out.println("producent: " + producent);
-        System.out.println("matryca: " + matryca);
+//        System.out.println("matryca: " + matryca);
         System.out.println("ogniskowa: " + ogniskowa);
         System.out.println("zakres: " + zakresOgniskowej);
         System.out.println("fish-eye: " + czyFishEye);
@@ -181,6 +172,7 @@ public class Obiektyw {
             case "bez znaczenia":
                 zakresCenyString = "";
         }
+        SQL += zakresCenyString;
         
         return SQL;
     }
