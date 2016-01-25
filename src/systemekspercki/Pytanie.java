@@ -29,13 +29,13 @@ public class Pytanie {
     public void getOdpowiedz(){
         System.out.println("-----");
         Scanner reader = new Scanner(System.in); 
-        String input = reader.nextLine();
+        int input = reader.nextInt();
 //        mozliweOdpowiedzi.odpowiedz(input);
         
         while (!mozliweOdpowiedzi.odpowiedz(input)){
-            System.out.println("-----");
-            input = reader.nextLine();
-            System.out.println("INPUT: " + input);
+            System.out.println("Podaj poprawną cyfrę:");
+            input = reader.nextInt();
+            //System.out.println("INPUT: " + input);
         }
     }
     public String wybranaOdpowiedz(){

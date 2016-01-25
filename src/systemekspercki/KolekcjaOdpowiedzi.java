@@ -19,13 +19,8 @@ public class KolekcjaOdpowiedzi {
     
     public void wyswietl(){
          for(int i = 0; i< opcje.size(); i++){
-            try{
-                String odp = (String) opcje.get(i);
-                System.out.println(odp);
-            }catch(ClassCastException e){
-                int odp = (int) opcje.get(i);
-                System.out.println(odp);
-            }           
+             String odp = (String) opcje.get(i);
+             System.out.println(i+1 + ". " +odp);         
          }
     }
         
@@ -33,6 +28,16 @@ public class KolekcjaOdpowiedzi {
         return opcje;
     }
     
+    public boolean odpowiedz(int ktora){
+        ktora--;
+        if (ktora <= opcje.size()){
+            String opcja = (String) opcje.get(ktora);
+            setOdpowiedz(opcja);
+            return true;
+        }
+        return false;
+
+    }
     public boolean odpowiedz(String odp){
         for(int i = 0; i< opcje.size(); i++){
             String opcja = (String) opcje.get(i);
